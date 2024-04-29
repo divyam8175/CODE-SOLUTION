@@ -1,0 +1,14 @@
+bool isPowerOfTwo(int n)
+{	
+    // Write your code here.
+    int count=0;
+    while(n>0)
+    {
+        if(n%2==1)
+        count++;
+        n=n/2;
+    }
+    if(count==1)
+    return 1;
+    return 0;
+}
