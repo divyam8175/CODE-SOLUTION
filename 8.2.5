@@ -1,0 +1,26 @@
+vector<int> twoOddNum(vector<int> arr){
+    // Write your code here.
+    int x=0;
+    for(int i=0;i<arr.size();i++)
+    {
+      x=x^arr[i];
+    }
+   int rightmost=(x&x-1)^x;
+    int b1=0;
+    int b2=0;
+    for(int i=0;i<arr.size();i++)
+    {
+      if(rightmost&arr[i])
+      b1=b1^arr[i];
+      else
+      b2=b2^arr[i];
+
+    }
+    vector<int>v;
+    v.push_back(b1);
+    v.push_back(b2);
+    sort(v.begin(),v.end());
+    reverse(v.begin(),v.end());
+    return v;
+
+}
