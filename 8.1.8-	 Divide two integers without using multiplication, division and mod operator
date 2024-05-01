@@ -1,0 +1,12 @@
+int divideTwoInteger(int dividend, int divisor) {
+	int dd=abs(dividend);
+	int dr=abs(divisor);
+	int count=0;
+	while(dd>=dr){
+		dd-=dr;
+		count++;
+	}
+
+	if(divisor*dividend < 0) return (-count);
+	else return count;
+} 
